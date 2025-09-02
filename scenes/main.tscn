@@ -665,7 +665,7 @@ offset_bottom = 40.0
 [node name="MainSong" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-304, 544)
 stream = ExtResource("15_jkv2x")
-volume_db = -5.5
+volume_db = -3.0
 autoplay = true
 
 [node name="Upgrade2Sound" type="AudioStreamPlayer2D" parent="."]

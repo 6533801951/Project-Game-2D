@@ -39,11 +39,12 @@ offset_right = 264.0
 offset_bottom = -180.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.28485, 0.28485, 0.28485, 1)
+theme_override_colors/font_color = Color(0.955963, 0.955963, 0.955963, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("4_njgub")
 theme_override_font_sizes/font_size = 80
-text = "Game Name"
+text = "Slay the Tyrant"
 
 [node name="StartButton" type="TextureButton" parent="."]
 layout_mode = 1
