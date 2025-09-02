@@ -1,0 +1,122 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2yt7hm2ddnkh"]
+
+[ext_resource type="Script" uid="uid://x24bu47cgftc" path="res://scripts/game_over.gd" id="1_xeevv"]
+[ext_resource type="Texture2D" uid="uid://bced648w7f8db" path="res://assert/UI/gameover.png" id="2_racf3"]
+[ext_resource type="Texture2D" uid="uid://bqnlsg60p8pyo" path="res://assert/UI/retry.png" id="2_tbwuq"]
+[ext_resource type="FontFile" uid="uid://d2bt6csnbt3pq" path="res://assert/font/Minecraft.ttf" id="3_7m3ot"]
+[ext_resource type="Texture2D" uid="uid://cl477ck3oltst" path="res://assert/UI/close.png" id="5_v3hpu"]
+[ext_resource type="Texture2D" uid="uid://bd0a0cxa1spp5" path="res://assert/UI/retry_press.png" id="5_wawo4"]
+[ext_resource type="Texture2D" uid="uid://mdkymm5b1167" path="res://assert/UI/retry_hover.png" id="6_56v3a"]
+[ext_resource type="Texture2D" uid="uid://oyw782dfepci" path="res://assert/UI/close_press.png" id="8_o57t2"]
+[ext_resource type="Texture2D" uid="uid://bqque144m5gde" path="res://assert/UI/close_hover.png" id="9_uq3qu"]
+[ext_resource type="AudioStream" uid="uid://dtqnufet6l6d1" path="res://assert/song/click_sound.mp3" id="10_56v3a"]
+[ext_resource type="AudioStream" uid="uid://bsbi7edq7bwue" path="res://assert/song/game_over_song.mp3" id="11_o57t2"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -960.0
+offset_right = 960.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+script = ExtResource("1_xeevv")
+
+[node name="Gameover" type="Sprite2D" parent="."]
+position = Vector2(960, 552)
+scale = Vector2(1.26291, 1.11259)
+texture = ExtResource("2_racf3")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -324.0
+offset_right = 144.0
+offset_bottom = -253.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_7m3ot")
+theme_override_font_sizes/font_size = 80
+text = "You died"
+
+[node name="RetryButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = 60.0
+offset_right = 277.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("2_tbwuq")
+texture_pressed = ExtResource("5_wawo4")
+texture_hover = ExtResource("6_56v3a")
+stretch_mode = 3
+
+[node name="CloseButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 768.0
+offset_right = 1238.0
+offset_bottom = 916.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("5_v3hpu")
+texture_pressed = ExtResource("8_o57t2")
+texture_hover = ExtResource("9_uq3qu")
+stretch_mode = 3
+
+[node name="timer_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -172.0
+offset_right = 280.0
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_7m3ot")
+theme_override_font_sizes/font_size = 50
+text = "Time: 0"
+
+[node name="score_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -68.0
+offset_right = 280.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_7m3ot")
+theme_override_font_sizes/font_size = 50
+text = "Score: 0"
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-160, 752)
+stream = ExtResource("10_56v3a")
+
+[node name="GameOverSong" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-240, 512)
+stream = ExtResource("11_o57t2")
+autoplay = true
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

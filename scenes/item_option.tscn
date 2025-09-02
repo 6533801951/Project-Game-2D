@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://brfxicanvvlne"]
+
+[ext_resource type="Script" uid="uid://4dpe12orynee" path="res://scripts/item_option.gd" id="1_175qx"]
+[ext_resource type="Texture2D" uid="uid://dup85cud46luo" path="res://assert/sprite/skill/heal_skill.png" id="1_ggsbn"]
+[ext_resource type="FontFile" uid="uid://d2bt6csnbt3pq" path="res://assert/font/Minecraft.ttf" id="2_3iax0"]
+
+[node name="ItemOption" type="ColorRect"]
+custom_minimum_size = Vector2(650, 150)
+anchors_preset = -1
+anchor_right = 0.339
+anchor_bottom = 0.139
+offset_right = -0.880005
+offset_bottom = -0.12001
+color = Color(0.581033, 0.581033, 0.581033, 1)
+script = ExtResource("1_175qx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 124.0
+offset_bottom = 124.0
+color = Color(0, 0, 0, 1)
+
+[node name="ItemIcon" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_ggsbn")
+
+[node name="lbl_name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 32.0
+offset_right = 528.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("2_3iax0")
+theme_override_font_sizes/font_size = 28
+text = "Name"
+
+[node name="lbl_description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 80.0
+offset_right = 608.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("2_3iax0")
+theme_override_font_sizes/font_size = 25
+text = "Description"
+autowrap_mode = 3
+
+[node name="lbl_level" type="Label" parent="."]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 32.0
+offset_right = 627.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_3iax0")
+theme_override_font_sizes/font_size = 25
+text = "Level: 1"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
