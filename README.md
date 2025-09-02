@@ -112,8 +112,7 @@
 
 ---
 ## Demo  
-*(ใส่ลิงก์เกมที่ deploy แล้ว เช่น GitHub Pages)*  
-
+https://6533801951.github.io/Project-Game-2D/
 ---
 
 ## Credits  
