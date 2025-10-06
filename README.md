@@ -116,15 +116,11 @@ https://6533801951.github.io/Project-Game-2D/
 ---
 
 ## Credits  
-- **Cursor Mouse** : https://spawncampgames.itch.io/white-icon-pack  
-- **TileMap** : https://cainos.itch.io/pixel-art-top-down-basic  
-- **Player Character** : https://livingtheindie.itch.io/pixel-sidescroller-character  
-- **Enemy** : https://tinymuse.itch.io/2d-pixel-woodland-monsters  
-- **Boss Enemy** : https://lineacross.itch.io/dino-2d  
-- **Item** :  
-  - https://idylwild.itch.io/idylwilds-arcanum  
-  - https://free-game-assets.itch.io/free-skill-3232-icons-for-cyberpunk-game  
-- **UI Buttons** (Start, Exit, Retry) : สร้างเองด้วย https://www.pixilart.com  
-- **Music** :  
+- **Model** ตัวละครและอาวุธ จาก https://poly.pizza/
+- **Classrooms AssetClassrooms Asset** จาก https://styloo.itch.io/classroom-asset-pack
+- **Health Bar** จาก https://sweenus.itch.io/sharp-hud
+- **font** จาก https://www.f0nt.com/release/wdb-bangna/
+- **sound และ music** จาก https://pixabay.com/ 
+
   - https://pixabay.com  
   - https://mixkit.co  
